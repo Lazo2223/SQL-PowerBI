@@ -83,3 +83,14 @@ FROM lagging
 ```
 <img width="1435" alt="Screenshot 2025-03-24 at 14 58 10" src="https://github.com/user-attachments/assets/71a2c33e-2e58-4181-b58c-73e4d5c061d1" />
 
+<ins>T**he goal of this analysis**</ins>
+
+to-do
+
+<ins>**Key insights**</ins>
+
+to-do
+
+<ins>**Business use**</ins>
+
+**to-do
