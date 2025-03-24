@@ -34,7 +34,7 @@ ORDER BY get_month ASC, rank ASC)
 SELECT * FROM ranking
 WHERE rank in (1,2,3)
 ```
-We see that the top 3 sold cars each month. What we see with the result - same number of sold cars are presented with tie position. There could be more than 3 models returned. This is because of DENSE_RANK functions, further filtering will be needed.
+We see that the top 3 sold cars each month. What other we see with the result - same number of sold cars are presented with tie position. There could be more than 3 models returned. This is because of DENSE_RANK functions, further filtering will be needed.
 <img width="1437" alt="Screenshot 2025-03-24 at 14 48 06" src="https://github.com/user-attachments/assets/97d47576-c8d0-4685-9493-38e690f63271" />
 
 
