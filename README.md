@@ -8,12 +8,12 @@ Calculating total Revenue, avg Car price, the gender who buys a car based on mak
 
 
 #SQL queries on this dataset:
-CSV file was inported in PostgresSQL.
+CSV file was imported in PostgresSQL.
 
 
 1. Top-Selling Cars by Month
 Find the best-selling car models each month.
-Useing RANK() to get the top 3 cars per month.
+Using RANK() to get the top 3 cars per month.
 ```
 WITH filter_months AS (SELECT company, model, EXTRACT('month' FROM date) as get_month
 FROM car_sales),
@@ -34,6 +34,7 @@ ORDER BY get_month ASC, rank ASC)
 SELECT * FROM ranking
 WHERE rank in (1,2,3)
 ```
+
 We see that the top 3 sold cars each month. What other we see with the result - same number of sold cars are presented with tie position. There could be more than 3 models returned. This is because of DENSE_RANK functions, further filtering will be needed.
 <img width="1437" alt="Screenshot 2025-03-24 at 14 48 06" src="https://github.com/user-attachments/assets/97d47576-c8d0-4685-9493-38e690f63271" />
 
