@@ -65,19 +65,16 @@ Calculate total revenue per month.
 
 Getting Month to month revanue:
 ```
-SELECT *
-FROM car_sales
-
 WITH filtering AS (SELECT SUM(price) AS total_revanue, get_month FROM(
-SELECT price, EXTRACT('month'FROM date) AS get_month
-FROM
-car_sales)
-GROUP BY get_month
-ORDER BY get_month ASC),
+		SELECT price, EXTRACT('month'FROM date) AS get_month
+		FROM
+		car_sales)
+		GROUP BY get_month
+		ORDER BY get_month ASC),
 
-lagging AS (SELECT total_revanue, get_month,
-LAG(total_revanue,1) OVER() AS prev_month_value
-FROM filtering)
+lagging AS 	(SELECT total_revanue, get_month,
+		LAG(total_revanue,1) OVER() AS prev_month_value
+		FROM filtering)
 
 SELECT total_revanue, prev_month_value, get_month, total_revanue - prev_month_value AS difference
 FROM lagging
@@ -85,7 +82,7 @@ FROM lagging
 <img width="1435" alt="Screenshot 2025-03-24 at 14 58 10" src="https://github.com/user-attachments/assets/71a2c33e-2e58-4181-b58c-73e4d5c061d1" />
 
 <ins>T**he goal of this analysis**</ins>
-
+The best selling car of this dataset is the VW Jetta, with 76 units sold on October.
 to-do
 
 <ins>**Key insights**</ins>
@@ -94,4 +91,11 @@ to-do
 
 <ins>**Business use**</ins>
 
-**to-do
+Car dealerships and manufacturers rely on data-driven insights to maximize sales, optimize inventory, and improve customer targeting. By analyzing car sales data, businesses can:
+	•	Identify top-selling models and adjust inventory accordingly.
+	•	Detect seasonal trends to plan promotions and discounts.
+	•	Segment customers based on preferences, demographics, and buying behavior.
+	•	Predict future demand using historical sales patterns and external factors like fuel prices or economic trends.
+
+This analysis can help businesses increase revenue, reduce excess inventory costs, and enhance customer satisfaction through data-backed decision-making.
+
