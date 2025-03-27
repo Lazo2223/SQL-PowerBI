@@ -36,6 +36,8 @@ WHERE rank in (1,2,3)
 ```
 
 We see that the top 3 sold cars each month. What other we see with the result - same number of sold cars are presented with tie position. There could be more than 3 models returned. This is because of DENSE_RANK functions, further filtering will be needed.
+
+What can be ovserved is that the best selling car of this dataset is the VW Jetta, with 76 units sold on October.
 <img width="1437" alt="Screenshot 2025-03-24 at 14 48 06" src="https://github.com/user-attachments/assets/97d47576-c8d0-4685-9493-38e690f63271" />
 
 
@@ -82,7 +84,7 @@ FROM lagging
 <img width="1435" alt="Screenshot 2025-03-24 at 14 58 10" src="https://github.com/user-attachments/assets/71a2c33e-2e58-4181-b58c-73e4d5c061d1" />
 
 <ins>T**he goal of this analysis**</ins>
-The best selling car of this dataset is the VW Jetta, with 76 units sold on October.
+
 to-do
 
 <ins>**Key insights**</ins>
